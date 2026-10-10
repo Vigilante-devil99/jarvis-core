@@ -17,14 +17,14 @@ public class ShellTask implements Task {
     @Override
     public String getName() {
         return name;
-    }
+    }automation
 
     @Override
     public boolean requiresApproval() {
         return dangerous;
     }
-
-    @Override
+automation
+    
     public TaskResult execute() throws Exception {
         ProcessBuilder builder = new ProcessBuilder("bash", "-c", command);
         builder.redirectErrorStream(true);
