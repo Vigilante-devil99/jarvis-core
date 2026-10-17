@@ -24,7 +24,7 @@ public class ConversationMemory {
 
     private synchronized void addMessage(String role, String text) {
         history.add(new Message(role, text));
-        // Keep a sliding window (maxTurns * 2 messages for user + assistant pairs)
+        // Keep a sliding window 
         while (history.size() > maxTurns * 2) {
             history.remove(0);
         }
